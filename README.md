@@ -10,7 +10,7 @@ SKILLS COVERED
 
 This isn't strictly an MVC (Model,View,Controller) application but it's written to help students of PHP to begin thinking about how to SEPARATE VIEWS and LOGIC.
 So, everything related to views is in 1 file. 
-EVerything related to models is in another file.
+Everything related to models is in another file.
 
 REMEMBER:  Add your own database details where you see PDO classes being instantiated. 
 
