@@ -1,7 +1,7 @@
 # PHP Book database application
 This is a nice and easy application for students to see various concepts in action.
 
-SKILLS COVERED
+<b>SKILLS COVERED</b>
 - Using PDO classes to connect to a MySQL database.
 - Inserting into a database
 - Delete from a database
