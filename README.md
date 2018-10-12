@@ -10,11 +10,11 @@ SKILLS COVERED
 
 DESIGN SKILLS (SEE MODEL.PHP)
 - Template design pattern used
-- Abstract Classes
+- Abstract Classes.
 Our main class is abstract.  Every class we use in the app extends it.  
-- Dependency Injection
+- Dependency Injection.
 We insert our database configuration details into the main class. This allows changes to our DB config in the future without affecting the main class.
-- Single Responsibility
+- Single Responsibility.
 The classes all have one responsibility in the app. This is the 'S' in solid.
 - Interface segregation
 - Inheritance - extended classes
