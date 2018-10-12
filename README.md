@@ -1,20 +1,35 @@
 # PHP Book database application
-This is a nice and easy application for students to see various concepts in action.
+This is an easy to understand single page application to help any students looking to understand some design patterns. The app demonstrates how to think about using these skills
+
+Basically, it's a single page app where you can add book details to your database.  You can also see all of the books on the same page, and delete any book, all from the same page.
 
 SKILLS COVERED
+- MVC - separation of concerns, specifically MODELS (CLASSES) and VIEWS
 - Using PDO classes to connect to a MySQL database.
-- Inserting into a database
-- Delete from a database
-- Update database entries
-- HTML form building.
+- Displaying database query results, inserting and deleting database items using PDO in PHP.
 
-This isn't strictly an MVC (Model,View,Controller) application but it's written to help students of PHP to begin thinking about how to SEPARATE VIEWS and LOGIC.
-So, everything related to views is in 1 file. 
-Everything related to models is in another file.
+DESIGN SKILLS (SEE MODEL.PHP)
+- Template design pattern used
+- Abstract Classes
+Our main class is abstract.  Every class we use in the app extends it.  
+- Dependency Injection
+We insert our database configuration details into the main class. This allows changes to our DB config in the future without affecting the main class.
+- Single Responsibility
+The classes all have one responsibility in the app. This is the 'S' in solid.
+- Interface segregation
+- Inheritance - extended classes
+- DRY - not repeating code.
 
-REMEMBER:  Add your own database details where you see PDO classes being instantiated. 
+NOTES:
+MVC is used but our 'Controller' is not a controller in the true sense of routing the user to different views and pages as in Symfony, Zend or ASP.NET.
+This app is more to show how you can separate your MODEL (classes) and your VIEWS
+Because its a sinle page app, the controller handles form input results before returning data to the view of our single VIEW.PHP page.
+The 'controller' just asesses whether we have to instantiate an insert or delete class from our model.
+The 'controller' alters the message outputs and passes in the SELECT all query results.
 
-NOTE FOR BEGINNERS: To set up a development environment, search online for WAMP or XAMP server. You can then replace your own 
-database details and start editing and playing around with the code, adapting it to become another type of database app, as you wish!
+NOTE: A single page app which interracts with a database would probably be better written using AJAX. As mentioned before, this app is really just to consolidate some design patterns and SOLID and MVC concepts I have been looking at.  
 
-See other lessons I will be adding on GitHub related to forms in PHP and using PDO classes within PHP.
+I hope this helps a budding developer who is learning how to code with OOP!
+
+
+
