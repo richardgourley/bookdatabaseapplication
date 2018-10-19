@@ -1,7 +1,6 @@
 <?php
-//ADD YOUR DATABASE DETAILS TO THIS FILE TO BE REQUIRED BY MODEL
 
-$hn;
-$un;
-$pw;
-$db;
+$hn = 'localhost';
+$un = 'root';
+$pw = '';
+$db = 'publications';

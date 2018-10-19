@@ -27,25 +27,7 @@ echo <<<END
 
 END;
         
-
-        
-            /*foreach($output as $arr)
-        {
-            echo <<<_END
-            echo "<p>Author: $arr[0]</p>";
-            echo "<p>Title: $arr[1]</p>";
-            echo "<p>Year: $arr[2]</p>";
-            echo "<p>ISBN: $arr[3]</p>";
-           
-            <form action="controller.php" method="post">
-            <input type="hidden" name="delete" value="yes">
-            <input type="hidden" name="isbn" value="$arr[3]">
-            <input type="submit" value="DELETE ENTRY">
-            
-_END;
-        }*/
-        
-foreach($output as $arr)
+foreach($books_array as $arr)
 {
     echo "Author: $arr[0]. Title: $arr[1].<br> Year: $arr[2]. ISBN: $arr[3]<br>";
 
@@ -56,14 +38,7 @@ foreach($output as $arr)
 <input type="submit" value="DELETE RECORD">
 </form>
 _END;
-
-            
-
-}
-
-
-        
-        
+}     
 
 echo <<<_END
     </body>

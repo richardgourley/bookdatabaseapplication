@@ -10,11 +10,11 @@ SKILLS COVERED
 
 DESIGN SKILLS (SEE MODEL.PHP)
 - Template design pattern used
-- Abstract Classes.
+- Abstract Classes
 Our main class is abstract.  Every class we use in the app extends it.  
-- Dependency Injection.
+- Dependency Injection
 We insert our database configuration details into the main class. This allows changes to our DB config in the future without affecting the main class.
-- Single Responsibility.
+- Single Responsibility
 The classes all have one responsibility in the app. This is the 'S' in solid.
 - Interface segregation
 - Inheritance - extended classes
@@ -22,10 +22,8 @@ The classes all have one responsibility in the app. This is the 'S' in solid.
 
 NOTES:
 MVC is used but our 'Controller' is not a controller in the true sense of routing the user to different views and pages as in Symfony, Zend or ASP.NET.
-
 This app is more to show how you can separate your MODEL (classes) and your VIEWS
 Because its a sinle page app, the controller handles form input results before returning data to the view of our single VIEW.PHP page.
-
 The 'controller' just asesses whether we have to instantiate an insert or delete class from our model.
 The 'controller' alters the message outputs and passes in the SELECT all query results.
 
