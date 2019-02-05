@@ -1,4 +1,0 @@
-HERE IS THE DATABASE TABLE USED IN THE APP
-You can add this to your database via code or use PHPmyadmin on your local WAMP or XAMP server.
-
-CREATE TABLE books( author VARCHAR(128) NOT NULL, title VARCHAR(128) NOT NULL, year SMALLINT, isbn CHAR(13) NOT NULL PRIMARY KEY )
