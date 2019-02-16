@@ -3,6 +3,7 @@ class Bootstrap{
   private $request;
 
   public function __construct($request){
+     //$request function is an array based on $_GET taken from browser input. 'application/controller/action/id'
      $this->request = $request;   
   }
   
