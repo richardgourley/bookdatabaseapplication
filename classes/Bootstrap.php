@@ -34,7 +34,7 @@ class Bootstrap{
         $parents = class_parents($this->controller); 
         if(in_array('Controller', $parents)){ 
            if(method_exists($this->controller, $this->action)){ 
-              return new $this->controlller($this->action, $this->request); 
+              return new $this->controller($this->action, $this->request); 
            }else{
               echo "Method " . $this->action . " doesn't exist in class " . $this->controller . "."; 
            }
