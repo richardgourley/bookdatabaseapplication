@@ -5,7 +5,7 @@ require_once('config.php');
 require_once('classes/bootstrap.php');
 
 $bootstrap = new Bootstrap($_GET);
-$controller->create_controller();
+$controller = $bootstrap->create_controller();
 
 if($controller){
 	$controller->execute_action();
