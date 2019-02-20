@@ -13,7 +13,7 @@ This is an example of how to build a PHP MVC application from scratch without fr
 See the line that starts with index.php?controller=..... This file makes sure that all requests (in the browser) direct to our index.php file. 
 This file sets request from the browser to have 1 or 2 parameters eg localhost/books or localhost/books/add.
 2. Next, copy the CONFIG.php file that sets the database and app root constants.
-3. Next, copy the INDEX.php file but delete the required files for now.  Add required files to INDEX.php as you create and test them.
+3. Next, copy the INDEX.php file but delete the required files for now.  Re-add these required files to INDEX.php as you create and test them below.
 4. Next, copy the BOOTSTRAP.php file in the classes folder.
 Enter different requests in the browser and follow what is happening.
 4. Create the base CONTROLLER.php class.
