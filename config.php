@@ -13,17 +13,12 @@ isbn 	char(13) 	NO 	PRI 	NULL
 */
 
 //Add in your local host development details for your MySQL database!
-//Server name
-define('DB_HOST', 'localhost');
-//Username
-define('DB_USER', '');
-//Password
-define('DB_PASS', '');
-//The name of the database.
-define('DB_NAME', 'publications');
+define('DB_HOST', 'localhost');  //Server
+define('DB_USER', ''); //Username
+define('DB_PASS', ''); //Password
+define('DB_NAME', 'publications'); //Database name
 
 //CONSTANTS DEFINED FOR USE IN OUR APP
-//Here add in the folder name where you will place your application.
 define('ROOT_PATH', "/bookdatabaseapplication/");
-//Here add in the full root url for your application
 define('ROOT_URL', "http://localhost/bookdatabaseapplication");
+
