@@ -1,7 +1,10 @@
 <?php
 class Home extends Controller{
 	//Called by Controller function execute_action().
-	public function Index(){
-		echo "Hello I am index function inside the Home class.";
+	protected function Index(){
+		//Instantiate HomeModel
+		$viewmodel = new HomeModel();
+        //Pass in Index() from our home model into the return_view function.
+		$this->return_view($viewmodel->Index(), true);
 	}
 }
