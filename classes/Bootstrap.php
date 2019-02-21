@@ -30,8 +30,9 @@ class Bootstrap{
   */
   public function create_controller(){
      if(class_exists($this->controller)){ 
-        //Next 2 lines - Gets classes $this->controller extends from (array). Then we check 'Controller' base class exists and $this->controller extends from it.
+        //Get array of classes that class named $this->controller extends from.
         $parents = class_parents($this->controller); 
+        //Check 'Controller' base class exists and is extended from by class named $this->controller.
         if(in_array('Controller', $parents)){ 
            if(method_exists($this->controller, $this->action)){ 
               return new $this->controller($this->action, $this->request); 
