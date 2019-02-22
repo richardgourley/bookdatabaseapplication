@@ -7,14 +7,12 @@ class Bootstrap{
   public function __construct($request){
      $this->request = $request;
 
-     //If request is blank ie. site home page, $controller = 'home', $action = 'index'
      if($this->request['controller'] == ""){
         $this->controller = 'home';
      }else{
         $this->controller = $this->request['controller'];
      }
 
-     //If request['action'] is blank, set to index. Eg 'bookdatabaseapplication/books' = $controller = 'books', $action = 'index'
      if($this->request['action'] == ""){
         $this->action = 'index';
      }else{
@@ -24,9 +22,9 @@ class Bootstrap{
   }
   
   /*
+  * 
   * @ return = returns either a new instance of a controller based on controller name and action OR...
   * ... prints an error message and returns if controller OR action does not exist.
-  *
   */
   public function create_controller(){
      if(class_exists($this->controller)){ 
