@@ -5,8 +5,8 @@ class HomeModel extends Model{
 		$params = array();
 		$this->set_query($query, $params);
 		$results = $this->get_results();
-		var_dump($results);
-		return;
+		//var_dump($results);
+		return $results;
 	}
 }
 

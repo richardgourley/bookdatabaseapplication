@@ -21,7 +21,7 @@ abstract class Model{
         $this->stmt = $this->conn->prepare($this->query);
         $this->bind_class = new Bind();
         $results = $this->bind_class->bind_execute($this->stmt, $this->params);
-        var_dump($results);
+        //var_dump($results);
     }
 
     
