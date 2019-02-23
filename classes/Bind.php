@@ -1,7 +1,7 @@
 <?php
 class Bind{
    
-    public function bind_execute($stmt, $params){
+    public function bind_params($stmt, $params){
         if(!$params == null || !count($params) == 0){
             for($i=0; $i<count($params); $i++){
                 if(is_null($params[$i])){ $stmt->bindParam($i+1, $params[$i], PDO::PARAM_NULL); }
@@ -11,8 +11,7 @@ class Bind{
             }
         }
 
-        $stmt->execute();
-        $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
-        return $results;
+        return $stmt;
     }
+
 }

@@ -2,9 +2,10 @@
 class Home extends Controller{
 	//Called by Controller function execute_action().
 	protected function Index(){
-		//Instantiate HomeModel
 		$viewmodel = new HomeModel();
-        //Pass in Index() from our home model into the return_view function.
-		$this->return_view($viewmodel->Index(), true);
+		$this->return_view($viewmodel->Index(), true); //results from Home model Index() passed to return_view (See return_view in base controller and see where varialbe $viewmodel is called in views/home/index.php)
 	}
+
+	
 }
+

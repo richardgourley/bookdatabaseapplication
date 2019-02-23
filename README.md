@@ -7,28 +7,24 @@ OVERVIEW:
 The app is a simple CRUD (create, read, update, delete) application.
 This is an example of how to build a PHP MVC application from scratch without frameworks.
 
-## If you are learning and using this as a reference, I recommend building the application step by step in the following order.
+## If you are learning about MVC and PHP, I recommend building the application up step by step in the following order.
 
-1. Start with the .HTACCESS file. 
+1. Start with the .HTACCESS file. (You need to right click and select 'Run as Administrator' when creating it.)
 See the line that starts with index.php?controller=..... This file makes sure that all requests (in the browser) direct to our index.php file. 
-This file sets request from the browser to have 1 or 2 parameters eg localhost/books or localhost/books/add.
+This file handles request from the browser that can have 1 or 2 parameters eg localhost/books or localhost/books/add.
 2. Next, copy the CONFIG.php file that sets the database and app root constants.
-3. Next, copy the INDEX.php file but delete the required files for now.  Re-add these required files to INDEX.php as you create and test them below.
+3. Next, copy the INDEX.php file but delete the required files for now.  Re-add these required files to INDEX.php as you build up the application.
 4. Next, copy the BOOTSTRAP.php file in the classes folder.
-Enter different requests in the browser and follow what is happening.
-4. Create the base CONTROLLER.php class.
-5. Create the home.php file in the folder controllers.
-6. Create the Index() function in the Home class in controllers/home.php, adding a test echo command.
+5. Copy the BIND, DB, CONTROLLER and MODEL base classes into the classes folder.
+6. Great, now you can start adding the controllers/home, models/home and views/home/index files. 
 
-With the above steps, you should be able to see how the app operates inside the INDEX.php file by creating an instance of the BOOTSTRAP class with the BROWSER request as a parameter. (CONTROLLER, ACTION strings)
-Then we call the function CREATE_CONTROLLER inside the bootstrap class which uses the CONTROLLER to look for the corresponding CONTROLLER CLASS from our required files in INDEX.php.
-Then the CONTROLLER we have created executes its ACTION, (ACTION string from the original browser request) all coming from the BROWSER request.
-
-Next, start adding the Model classes and see how they are created inside of the controller classes.
+Play around with different requests to see the flow of the application.  
+Add in your own MODELS, VIEWS and CONTROLLERS to practice and follow how the app works. 
+You can adapt this basic MVC model to any web app you wish to build.
 
 SKILLS COVERED
 * MVC architecture
 * Abstract classes
 * Inheritance
 * PDO database connection
-* Session handling in PHP
+* Session handling (can be integrated into the app by creating a users table in the db.)

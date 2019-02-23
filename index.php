@@ -9,6 +9,8 @@ require_once('classes/Db.php');
 require_once('classes/Bind.php');
 require_once('controllers/home.php');
 require_once('models/home.php');
+require_once('controllers/book.php');
+require_once('models/book.php');
 
 $bootstrap = new Bootstrap($_GET);
 $controller = $bootstrap->create_controller();
