@@ -1,6 +1,12 @@
 <?php
 class Bind{
    
+    /**
+    *
+    * Each param in $params array - looped and loop number and type used to bind to $stmt.
+    * @ return: $stmt returned with $params bound to it.
+    */
+
     public function bind_params($stmt, $params){
         if(!$params == null || !count($params) == 0){
             for($i=0; $i<count($params); $i++){
