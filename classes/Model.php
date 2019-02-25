@@ -27,7 +27,6 @@ abstract class Model{
 
     public function validate_year($str){
        if(strlen($str) == 4 && is_numeric($str)){
-          echo "YEAR OK<br>";
           return true;
        }else{
           return false;
@@ -36,7 +35,6 @@ abstract class Model{
 
     public function validate_int($str){
        if(strlen($str) <= 13 && is_numeric($str)){
-          echo "ISBN OK";
           return true;
        }else{
           return false;
