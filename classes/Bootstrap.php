@@ -1,5 +1,10 @@
 <?php
 class Bootstrap{
+  /**
+  *
+  * This class handles the browser request and creates the controller
+  *
+  */
   private $request;
   private $controller;
   private $action;

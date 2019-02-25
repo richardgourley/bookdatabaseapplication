@@ -4,6 +4,7 @@ abstract class Controller{
    protected $action;
    protected $request;
 
+   //Created by classes/Bootstrap.php
    public function __construct($action, $request){
       $this->action = $action;
       $this->request = $request;

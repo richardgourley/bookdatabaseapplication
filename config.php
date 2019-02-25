@@ -1,9 +1,9 @@
 <?php
 //DATABASE SET UP
 //1. Create a database called 'publications'
-//2. Create a table called 'books'
+//2. Create a table called 'classics'
 /*
-SCHEMA - TABLE - books:
+SCHEMA - TABLE - classics:
 
 Field 	Type 	Null 	Key 	Default 	Extra 	
 author 	varchar(128) 	NO 		NULL	
