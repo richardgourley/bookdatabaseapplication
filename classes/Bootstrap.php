@@ -33,24 +33,23 @@ class Bootstrap{
   * ... prints an error message and returns if controller OR action does not exist.
   */
   public function create_controller(){
-     if(class_exists($this->controller)){ 
-        //Get array of classes that class named $this->controller extends from.
-        $parents = class_parents($this->controller); 
-        //Check 'Controller' base class exists and is extended from by class named $this->controller.
-        if(in_array('Controller', $parents)){ 
-           if(method_exists($this->controller, $this->action)){ 
-              return new $this->controller($this->action, $this->request); 
-           }else{
-              echo "Method " . $this->action . " doesn't exist in class " . $this->controller . "."; 
-           }
-        }else{
-           echo "Class named " . $this->controller . " found but base controller class not found."; 
-           return;
-        }
-     }else{
-        echo "Class named " . $this->controller . " not found."; 
-        return;
-     }
+      if(!class_exists($this->controller)){
+          echo "Class named " . $this->controller . " not found."; 
+          return;
+      }
+
+      $parents = class_parents($this->controller);
+      if(!in_array('Controller', $parents)){
+          echo "Class named " . $this->controller . " found but base controller class not found."; 
+          return; 
+      }
+
+      if(!method_exists($this->controller, $this->action)){
+          echo "Method " . $this->action . " doesn't exist in class " . $this->controller . "."; 
+          return;
+      }
+
+      return new $this->controller($this->action, $this->request); 
   }
 
 }
